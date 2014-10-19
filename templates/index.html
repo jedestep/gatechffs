@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{%block maincontent%}
+<h2>GaTech Free and For Sale</h2>
+<div>
+	<form action="/listing" method="POST" id="nonclsub">
+		Title: <input type="text" name="title">
+		Email: <input type="text" name="email">
+		Phone: <input type="text" name="phone">
+		Price: (leave blank for free!) <input type="text" name="price">
+		Description: <input type="textarea" name="desc">
+		<input type="submit" value="Submit a new listing">
+	</form>
+	<br/>
+	Already selling your stuff on craigslist? Submit the link here and we'll promote it!
+	<form action="/listing" method="POST" id="clsub">
+		<input type="text" name="cllink">
+		<input type="submit" value="Submit your Craigslist link">
+	</form>
+</div>
+{%endblock%}

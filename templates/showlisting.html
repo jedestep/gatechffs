@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{%block maincontent%}
+<h2>{{listing['title']}}</h2>
+<div>
+<ul>
+<li>
+	{{listing['desc']}}
+</li>
+<li>
+	Price: {% if listing['price'] == 0 or not listing['price']%} <em>FREE</em>
+		{%else%} {{listing['price']}}
+		{%endif%}
+</li>
+<li>
+	Contact: {% if listing['email'] %}{{listing['email']}}{%endif%}
+		{% if listing['phone'] %}{{listing['phone']}}{%endif%}
+</li>
+</ul>
+</div>
+{%endblock%}
